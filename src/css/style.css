@@ -1,0 +1,12 @@
+#map-canvas {
+	width: 90%;
+	height: 800px;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	position: absolute;
+	left: 5%;
+	top: 5%;
+}
+.button-div{
+	margin-left: 5%;
+}
