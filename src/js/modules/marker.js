@@ -1,3 +1,5 @@
+import events from './events';
+import drawmap from './drawmap';
 export default function(location) {
     var position = new google.maps.LatLng(location.latitude, location.longitude),
         map = new google.maps.Map(document.getElementById('map-canvas'), { zoom: location.zoom }),
@@ -19,13 +21,7 @@ export default function(location) {
                 draggable: true,
                 label: markerLocs[i].title
             });
-            // marker click event
-            marker.addListener('click', function() {
-                map.setZoom(8);
-                map.setCenter(marker.getPosition());
-            });
-
-            markers.push();
+            markers.push(marker);
         }
     });
 
@@ -35,9 +31,10 @@ export default function(location) {
 
     function clearMarkers() {
         for (var i = 0; i < markers.length; i++) {
-            markers[i].removeListener('click');
             markers[i].setMap(null);
         }
         markers = [];
     }
+    events(map);
+    drawmap(map);
 };

@@ -1,4 +1,4 @@
-import gmap from './gmap';
+import marker from './marker';
 
 var location = {
 
@@ -8,7 +8,7 @@ var location = {
             longitude: 78.9629,
             zoom: 5
         };
-        gmap(location);
+        marker(location);
     }
 
 };
