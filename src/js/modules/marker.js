@@ -1,5 +1,7 @@
 import events from './events';
-import drawmap from './drawmap';
+import polyline from './polyline';
+import polygon from './polygon';
+import layers from './layers';
 export default function(location) {
     var position = new google.maps.LatLng(location.latitude, location.longitude),
         map = new google.maps.Map(document.getElementById('map-canvas'), { zoom: location.zoom }),
@@ -36,5 +38,7 @@ export default function(location) {
         markers = [];
     }
     events(map);
-    drawmap(map);
+    polyline(map);
+    polygon(map);
+    layers(map);
 };

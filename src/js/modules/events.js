@@ -40,12 +40,13 @@ export default function(map) {
     function clearMarkers() {
         for (var i = 0; i < markers.length; i++) {
             markers[i].setMap(null);
+            google.maps.event.clearListeners(markers[i], 'click');
         }
         markers = [];
     };
     // Accessing arguments in UI events
     map.addListener('click', function(e) {
-        map.panTo(e.latLng);
+        //map.panTo(e.latLng);
     });
 
     // Getting properties with event handlers
