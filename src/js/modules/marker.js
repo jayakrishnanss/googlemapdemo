@@ -2,6 +2,9 @@ import events from './events';
 import polyline from './polyline';
 import polygon from './polygon';
 import layers from './layers';
+import geocoding from './geocoding';
+import drawing from './drawing';
+
 export default function(location) {
     var position = new google.maps.LatLng(location.latitude, location.longitude),
         map = new google.maps.Map(document.getElementById('map-canvas'), { zoom: location.zoom }),
@@ -41,4 +44,6 @@ export default function(location) {
     polyline(map);
     polygon(map);
     layers(map);
+    geocoding(map);
+    drawing(map);
 };

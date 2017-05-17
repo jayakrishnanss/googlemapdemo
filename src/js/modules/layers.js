@@ -13,6 +13,9 @@ export default function(map) {
     });
 
     function drawKMLLayer() {
-
+        var ctaLayer = new google.maps.KmlLayer({
+            url: 'http://googlemaps.github.io/js-v2-samples/ggeoxml/cta.kml',
+            map: map
+        });
     }
 };
