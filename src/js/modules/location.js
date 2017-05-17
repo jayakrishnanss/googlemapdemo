@@ -4,8 +4,8 @@ var location = {
 
     init: function() {
         const location = {
-            latitude: 20.5937,
-            longitude: 78.9629,
+            latitude: 28.6139,
+            longitude: 77.2090,
             zoom: 5
         };
         marker(location);
