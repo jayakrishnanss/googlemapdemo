@@ -5,6 +5,7 @@ import layers from './layers';
 import geocoding from './geocoding';
 import drawing from './drawing';
 import placeapi from './placeapi';
+import locSearch from './locationSearch';
 
 export default function(location) {
     var position = new google.maps.LatLng(location.latitude, location.longitude),
@@ -48,4 +49,5 @@ export default function(location) {
     geocoding(map);
     drawing(map);
     placeapi(map, position);
+    locSearch(map);
 };
